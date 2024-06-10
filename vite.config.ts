@@ -6,6 +6,7 @@ import svgr from "vite-plugin-svgr"
 export default defineConfig({
   resolve: {
     alias: [
+      { find: "assets", replacement: "/src/assets" },
       { find: "components", replacement: "/src/components" },
       { find: "data", replacement: "/src/data" },
       { find: "pages", replacement: "/src/pages" },
