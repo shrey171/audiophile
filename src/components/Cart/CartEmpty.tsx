@@ -4,7 +4,7 @@ export const CartEmpty = () => {
       <p className="uppercase tracking-wide font-bold text-xl">Cart is empty</p>
       <img
         className="w-28"
-        src="/src/assets/shared/empty-cart.png"
+        src="/assets/shared/empty-cart.png"
         alt="empty-cart"
       />
     </div>

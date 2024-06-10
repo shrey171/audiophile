@@ -35,15 +35,15 @@ export const Home = () => {
       <section className="flex-column gap-4 w-10/12 max-w-screen-global mx-auto lg:gap-8 -translate-y-6 md:flex-row">
         <CategoryCard
           title="headphones"
-          iconPath="/src/assets/home/image-headphones.png"
+          iconPath="/assets/home/image-headphones.png"
         />
         <CategoryCard
           title="speakers"
-          iconPath="/src/assets/home/image-speakers.png"
+          iconPath="/assets/home/image-speakers.png"
         />
         <CategoryCard
           title="earphones"
-          iconPath="src/assets/home/image-earphones.png"
+          iconPath="/assets/home/image-earphones.png"
         />
       </section>
 
@@ -54,7 +54,7 @@ export const Home = () => {
         bg-accent bg-[url('svgs/pattern-circles.svg')] bg-top bg-[size:30rem] bg-no-repeat lg:flex-row lg:bg-pos-pattern-circles lg:bg-[size:70%] lg:gap-36 lg:px-24">
           <img
             className="w-48 md:w-72 xl:w-96 lg:translate-y-2"
-            src="src/assets/home/image-speaker-zx9.png"
+            src="/assets/home/image-speaker-zx9.png"
             alt="speaker-zx9"
           />
           <div className="flex-column items-center text-center gap-4 pt-8 md:gap-6 lg:items-start lg:text-start">
@@ -70,7 +70,7 @@ export const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="ps-10 py-28 rounded-lg bg-[url('src/assets/home/image-speaker-zx7.jpg')] bg-cover bg-no-repeat bg-bottom md:px-24">
+        <div className="ps-10 py-28 rounded-lg bg-[url('/assets/home/image-speaker-zx7.jpg')] bg-cover bg-no-repeat bg-bottom md:px-24">
           <div className="flex-column gap-4 md:gap-6">
             <p className="uppercase font-semibold text-2xl md:text-3xl">
               zx7 speaker
@@ -83,7 +83,7 @@ export const Home = () => {
         <div className="grid md:grid-cols-2 rounded-lg overflow-clip md:gap-10">
           <img
             className="w-full md:rounded-lg"
-            src="src/assets/home/image-earphones-yx1.jpg"
+            src="/assets/home/image-earphones-yx1.jpg"
             alt="earphones-yx1"
           />
           <div className="flex-column justify-center items-center gap-4 py-8 bg-gray md:gap-6 md:rounded-lg">
@@ -100,7 +100,7 @@ export const Home = () => {
       <section className="flex-column gap-6 text-center w-10/12 max-w-screen-global mx-auto md:flex-row-reverse md:text-start lg:gap-24">
         <img
           className="w-full rounded-lg"
-          src="src/assets/home/image-best-gear.jpg"
+          src="/assets/home/image-best-gear.jpg"
           alt="best-gear"
         />
         <div className="flex-column justify-center gap-6 basis-full">
