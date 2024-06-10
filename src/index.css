@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  font-family: Manrope, sans-serif;
+}
+
+::selection {
+  @apply bg-accent text-gray;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn {
+    @apply border py-3 px-4 text-sm font-semibold uppercase transition-colors duration-500 bg-accent border-accent text-white md:px-6 md:text-base;
+  }
+
+  .btn:hover {
+    @apply bg-black text-white border-white;
+  }
+
+  .btn-black {
+    @apply border-black bg-black text-white;
+  }
+
+  .btn-black:hover {
+    @apply bg-white text-accent;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-black text-black;
+  }
+
+  .category-card {
+    @apply grid basis-full place-items-center py-8 pt-12 cursor-pointer relative;
+  }
+
+  .category-card::after {
+    @apply content-[''] absolute bottom-0 -z-10 rounded-lg transition-all duration-300 w-full h-3/4 bg-gray hover:h-full
+  }
+
+  .footer-accent-bar {
+    @apply relative
+  }
+
+  .footer-accent-bar::before {
+    @apply content-[''] absolute top-0 h-1 w-20 bg-accent md:left-0 md:translate-x-0 md:w-24
+  }
+
+  .image-gallery img:nth-child(1) {
+    grid-area: a
+  }
+  .image-gallery img:nth-child(2) {
+    grid-area: b
+  }
+  .image-gallery img:nth-child(3) {
+    grid-area: c
+  }
+
+  .image-gallery {
+    grid-template-columns: 40% 1fr;
+    grid-template-areas: "a c" "b c";
+  }
+}
+
+@layer utilities {
+  .flex-column {
+    @apply flex flex-col
+  }
+}
