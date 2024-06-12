@@ -8,7 +8,7 @@ interface IProps {
 
 export const CategoryCard = ({ title, iconPath }: IProps) => {
   return (
-    <Link to={`/${title}`} className="category-card group">
+    <Link to={`/${title}`} className="category-card group drop-shadow-md">
       <img className="w-48" src={iconPath} alt={title} />
       <p className="uppercase font-semibold mb-3">{title}</p>
       <p className="uppercase text-sm font-bold text-text relative">

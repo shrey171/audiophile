@@ -13,7 +13,7 @@ export const CartItems = ({ cart }: IProps) => {
           <div className="flex items-center gap-4">
             <img
               src={item.image}
-              className="hidden w-16 rounded-lg sm:inline-block"
+              className="hidden w-16 rounded-lg drop-shadow sm:inline-block"
               alt={item.name}
             />
             <div className="text-sm">

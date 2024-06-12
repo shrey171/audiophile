@@ -1,6 +1,7 @@
 import * as raw from "data";
-import { AddToCart, IProduct, NotFound } from "components";
+import { AddToCart, IProduct } from "components";
 import { useParams } from "react-router-dom";
+import { NotFound } from "./NotFound";
 
 export const ProductDetail = () => {
   const { type = "", id } = useParams();
@@ -20,7 +21,7 @@ export const ProductDetail = () => {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full max-w-md rounded-lg"
+          className="w-full max-w-md rounded-lg drop-shadow-md"
         />
         <div className="md:w-full md:max-w-sm lg:max-w-lg">
           <p className="uppercase text-accent tracking-[.6rem] mb-3">

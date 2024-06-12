@@ -11,6 +11,7 @@ export interface ICartItem extends IProduct {
 interface IStoreState {
   isCartOpen: boolean;
   cart: ICartItem[];
+  getTotal: () => number;
   toggleCartOpen: () => void;
   addProductToCart: (product: IProduct) => void;
   removeProductFromCart: (product: IProduct) => void;
@@ -20,9 +21,10 @@ interface IStoreState {
 export const findItem = (array: ICartItem[], id: number) =>
   array.find((item: ICartItem) => item.id === id);
 
-export const useAppStore = create<IStoreState>()(set => ({
+export const useAppStore = create<IStoreState>()((set, get) => ({
   isCartOpen: false,
   cart: [],
+  getTotal: () => get().cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
   addProductToCart: (product: IProduct) =>
     set(
       produce(state => {

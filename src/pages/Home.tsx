@@ -99,7 +99,7 @@ export const Home = () => {
 
       <section className="flex-column gap-6 text-center w-10/12 max-w-screen-global mx-auto md:flex-row-reverse md:text-start lg:gap-24">
         <img
-          className="w-full rounded-lg"
+          className="w-full xl:w-auto rounded-lg"
           src="/assets/home/image-best-gear.jpg"
           alt="best-gear"
         />

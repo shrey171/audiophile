@@ -18,7 +18,7 @@ export const AddToCart = ({ product, className, small }: IProps) => {
   return (
     <div className={className}>
       {inCart?.quantity ? (
-        <div className="flex rounded overflow-clip drop-shadow-lg">
+        <div className="flex rounded overflow-clip drop-shadow-md">
           <button
             className={twMerge(qtyButtonClass, smallerQtyButtonClass)}
             onClick={() => removeProductFromCart(product)}>

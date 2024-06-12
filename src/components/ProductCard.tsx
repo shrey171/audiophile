@@ -22,7 +22,7 @@ export const ProductCard = (product: IProductCardProps) => {
       className="flex-column items-center gap-8 w-full md:flex-row md:items-start md:gap-12 lg:items-center lg:gap-24 lg:even:flex-row-reverse"
       key={product.id}>
       <img
-        className="rounded-lg w-full max-w-sm"
+        className="rounded-lg drop-shadow-md w-full max-w-sm"
         src={product.image}
         alt={product.name}
       />

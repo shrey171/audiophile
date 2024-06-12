@@ -11,7 +11,7 @@ export const Navbar = () => {
   const isCartOpen = useAppStore(state => state.isCartOpen);
 
   const cartIconClasses = twMerge(
-    "cursor-pointer hover:text-accent transition-colors duration-300",
+    "cursor-pointer hover:text-accent transition-colors duration-200",
     isCartOpen && "text-accent"
   );
 
@@ -21,9 +21,9 @@ export const Navbar = () => {
   );
   
   const ToggleIcon = open ? (
-    <Close className="hover:text-accent transition-colors duration-300" />
+    <Close className="hover:text-accent transition-colors duration-200" />
   ) : (
-    <Hamburger className="hover:text-accent transition-colors duration-300" />
+    <Hamburger className="hover:text-accent transition-colors duration-200" />
   );
 
 
@@ -35,16 +35,16 @@ export const Navbar = () => {
         </button>
         <Logo />
         <ul className="hidden gap-6 uppercase font-bold text-navlinks md:flex">
-          <li className="cursor-pointer hover:text-accent transition-colors duration-300">
+          <li className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/">home</Link>
           </li>
-          <li className="cursor-pointer hover:text-accent transition-colors duration-300">
+          <li className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/headphones">headphones</Link>
           </li>
-          <li className="cursor-pointer hover:text-accent transition-colors duration-300">
+          <li className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/speakers">speakers</Link>
           </li>
-          <li className="cursor-pointer hover:text-accent transition-colors duration-300">
+          <li className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/earphones">earphones</Link>
           </li>
         </ul>
@@ -54,22 +54,22 @@ export const Navbar = () => {
         <ul className="flex-column gap-6 w-10/12 mx-auto uppercase font-bold text-navlinks transition-all duration-0 md:flex">
           <li
             onClick={() => setOpen(false)}
-            className="cursor-pointer hover:text-accent transition-colors duration-300">
+            className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/">home</Link>
           </li>
           <li
             onClick={() => setOpen(false)}
-            className="cursor-pointer hover:text-accent transition-colors duration-300">
+            className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/headphones">headphones</Link>
           </li>
           <li
             onClick={() => setOpen(false)}
-            className="cursor-pointer hover:text-accent transition-colors duration-300">
+            className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/speakers">speakers</Link>
           </li>
           <li
             onClick={() => setOpen(false)}
-            className="cursor-pointer hover:text-accent transition-colors duration-300">
+            className="cursor-pointer hover:text-accent transition-colors duration-200">
             <Link to="/earphones">earphones</Link>
           </li>
         </ul>
