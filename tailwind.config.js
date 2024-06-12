@@ -3,6 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-desktop": "url('/src/assets/home/image-hero-desktop.jpg')",
+        "hero-tablet": "url('/src/assets/home/image-hero-tablet.jpg')",
+        "hero-mobile": "url('/src/assets/home/image-hero-mobile.jpg')",
+      },
       backgroundPosition: {
         "pos-pattern-circles": "-5rem -2rem",
       },

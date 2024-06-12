@@ -13,8 +13,8 @@ export const Home = () => {
       {/* Hero section */}
       <section
         className="flex items-center min-h-[30rem] h-[100vw] text-white bg-black bg-no-repeat bg-contain bg-top
-      bg-[url('/src/assets/home/image-hero-mobile.jpg')] sm:h-hero md:bg-[url('/src/assets/home/image-hero-tablet.jpg')] lg:bg-[url('/src/assets/home/image-hero-desktop.jpg')] lg:bg-right">
-        <div className="grid gap-4 w-10/12 mx-auto place-items-center max-w-screen-global sm:gap-6 md:gap-8 lg:place-items-start">
+      bg-hero-mobile sm:h-hero md:bg-hero-tablet lg:bg-hero-desktop lg:bg-right">
+        <div className="grid gap-4 place-items-center w-10/12 max-w-screen-global mx-auto sm:gap-6 md:gap-8 lg:place-items-start">
           <p className="uppercase tracking-[.6rem] text-textLight w-max">
             new product
           </p>
