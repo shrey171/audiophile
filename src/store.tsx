@@ -24,7 +24,8 @@ export const findItem = (array: ICartItem[], id: number) =>
 export const useAppStore = create<IStoreState>()((set, get) => ({
   isCartOpen: false,
   cart: [],
-  getTotal: () => get().cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
+  getTotal: () =>
+    get().cart.reduce((acc, item) => acc + item.price * item.quantity, 0),
   addProductToCart: (product: IProduct) =>
     set(
       produce(state => {

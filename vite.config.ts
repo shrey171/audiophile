@@ -12,6 +12,7 @@ export default defineConfig({
       { find: "pages", replacement: "/src/pages" },
       { find: "store", replacement: "/src/store" },
       { find: "svgs", replacement: "/src/svgs" },
+      { find: "zodSchemas", replacement: "/src/zodSchemas" },
     ],
   },
   server: {

@@ -1,15 +1,20 @@
+import { Helmet } from "react-helmet";
 import { CategoryCard } from "components";
 import { Link } from "react-router-dom";
-import * as data from "data";
+import { headphonesData, speakersData, earphonesData } from "data";
 
 export const Home = () => {
-  const heroId = data.headphonesData[0].id;
-  const firstProductId = data.speakersData[0].id
-  const secondProductId = data.speakersData[1].id
-  const thirdProductId = data.earphonesData[0].id
-  
+  const metadata = {
+    title: "Audiophile - Homepage",
+    description: "Bringing you the best audio gear. The premier store for high end headphones, earphones, speakers, and audio accessories. ",
+  };
+
   return (
     <main className="grid gap-24 lg:gap-36 pb-20 lg:pb-32">
+      <Helmet>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Helmet>
       {/* Hero section */}
       <section
         className="flex items-center min-h-[30rem] h-[100vw] text-white bg-black bg-no-repeat bg-contain bg-top
@@ -25,7 +30,7 @@ export const Home = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <Link className="btn w-max" to={`/headphones/${heroId}`}>
+          <Link className="btn w-max" to={`/headphones/${headphonesData[0].id}`}>
             see product
           </Link>
         </div>
@@ -65,7 +70,9 @@ export const Home = () => {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <Link className="btn btn-black w-max" to={`/speakers/${firstProductId}`}>
+            <Link
+              className="btn btn-black w-max"
+              to={`/speakers/${speakersData[0].id}`}>
               see product
             </Link>
           </div>
@@ -75,7 +82,9 @@ export const Home = () => {
             <p className="uppercase font-semibold text-2xl md:text-3xl">
               zx7 speaker
             </p>
-            <Link className="btn btn-outline w-max" to={`/speakers/${secondProductId}`}>
+            <Link
+              className="btn btn-outline w-max"
+              to={`/speakers/${speakersData[1].id}`}>
               see product
             </Link>
           </div>
@@ -90,7 +99,9 @@ export const Home = () => {
             <p className="uppercase font-semibold text-2xl md:text-3xl">
               yx1 earphones
             </p>
-            <Link className="btn btn-outline w-max" to={`/earphones/${thirdProductId}`}>
+            <Link
+              className="btn btn-outline w-max"
+              to={`/earphones/${earphonesData[0].id}`}>
               see product
             </Link>
           </div>

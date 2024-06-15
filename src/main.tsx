@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Checkout, Home, Layout, NotFound, ProductDetail } from "pages";
-import { ProductList } from "components";
+import { Checkout, Home, Layout, NotFound, ProductDetail, ProductList } from "pages";
 import { earphonesData, headphonesData, speakersData } from "data";
 import "./index.css";
 

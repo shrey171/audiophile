@@ -1,4 +1,4 @@
-import { IProduct, ProductCard } from "./ProductCard";
+import { IProduct, ProductCard } from "components";
 
 interface IProps {
   heading: string;
