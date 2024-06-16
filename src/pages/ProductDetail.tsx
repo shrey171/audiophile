@@ -2,6 +2,7 @@ import * as raw from "data";
 import { AddToCart, IProduct } from "components";
 import { useParams } from "react-router-dom";
 import { NotFound } from "./NotFound";
+import { Helmet } from "react-helmet";
 
 export const ProductDetail = () => {
   const { type = "", id } = useParams();
@@ -17,6 +18,10 @@ export const ProductDetail = () => {
 
   return (
     <div className="flex-column gap-14 w-10/12 max-w-screen-global mx-auto py-20 lg:gap-24 lg:py-24">
+      <Helmet>
+        <title>{`Audiophile - ${product.name}`}</title>
+        <meta name="description" content={product.description} />
+      </Helmet>
       <section className="flex-column items-center gap-8 md:flex-row md:items-start lg:gap-24">
         <img
           src={product.image}

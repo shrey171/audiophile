@@ -1,4 +1,5 @@
 import { IProduct, ProductCard } from "components";
+import { Helmet } from "react-helmet";
 
 interface IProps {
   heading: string;
@@ -8,6 +9,9 @@ interface IProps {
 export const ProductList = ({ heading, products }: IProps) => {
   return (
     <main className="animate-fadeIn">
+      <Helmet>
+        <title>{`Audiophile - ${heading}`}</title>
+      </Helmet>
       <h1 className="uppercase text-center tracking-wider font-bold text-3xl py-6 bg-black text-gray md:text-4xl md:py-12">
         {heading}
       </h1>

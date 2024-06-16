@@ -15,7 +15,7 @@ export const DropDown = forwardRef<HTMLSelectElement, IProps>(
     );
     const inputClasses = twMerge(
       "border-2 border-inputBorder outline-none text-sm font-semibold rounded-lg w-full px-4 py-3 mb-1 bg-white transition-colors duration-200 focus:border-accent disabled:bg-gray disabled:cursor-not-allowed",
-      error && "!bg-inputError/20"
+      error && "!bg-inputError/20 border-inputError/10"
     );
     return (
       <div>

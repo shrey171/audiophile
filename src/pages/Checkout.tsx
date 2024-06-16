@@ -5,6 +5,7 @@ import { useAppStore } from "store";
 import { CheckoutSchema, ICheckoutForm } from "zodSchemas";
 import { countries } from "data";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export const Checkout = () => {
   const {
@@ -22,7 +23,7 @@ export const Checkout = () => {
   const states = countries.find(c => c.name === country)?.states || [];
   const cities = states.find(s => s.name === state)?.cities || [];
 
-  const shippingCost = 50;
+  const shippingCost = cart.length > 0 ? 50 : 0;
   const tax = sum * 0.2;
   const cashFormat = (price: number) =>
     new Intl.NumberFormat("en-US", {
@@ -36,12 +37,15 @@ export const Checkout = () => {
 
   useEffect(() => {
     setValue("city", "");
-  }, [state]);
+  }, [state]);  
 
   return (
     <main
       className="w-10/12 max-w-screen-global mx-auto py-12 flex flex-col-reverse gap-20 items-center 
     xl:gap-20 xl:py-24 xl:flex-row xl:items-start">
+      <Helmet>
+        <title>{"Audiophile - Checkout"}</title>
+      </Helmet>
       <section className="rounded-lg sm:p-12 w-full max-w-3xl xl:p-0">
         <h1 className="uppercase font-bold text-3xl mb-8">Checkout</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-12">
@@ -91,7 +95,7 @@ export const Checkout = () => {
               />
             </div>
           </div>
-          <button className="btn w-full md:w-32">Pay</button>
+          <button disabled={cart.length < 1} className="btn w-full md:w-32 disabled:bg-gray disabled:border-gray disabled:text-text disabled:cursor-not-allowed">Pay</button>
         </form>
       </section>
       <section className="w-full max-w-3xl sm:p-12 xl:w-6/12 xl:p-0">
@@ -133,7 +137,7 @@ export const Checkout = () => {
         <div className="flex justify-between">
           <p className="text-text font-semibold uppercase">total</p>
           <p className="font-bold text-xl text-accent">
-            {cashFormat(sum + 50 + sum * 0.18)}
+            {cashFormat(sum + shippingCost + sum * 0.18)}
           </p>
         </div>
       </section>

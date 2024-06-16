@@ -10,7 +10,7 @@ export const TextInput = forwardRef<HTMLInputElement, IProps>(
   ({ className, name, label, error, ...props }, ref) => {
     const inputClasses = twMerge(
       "border-2 border-inputBorder outline-none text-sm font-semibold rounded-lg w-full px-4 py-3 mb-1 transition-colors duration-200 focus:border-accent",
-      error && "bg-inputError/20",
+      error && "bg-inputError/20 border-inputError/20",
     );
 
     const labelClasses = twMerge(
