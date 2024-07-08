@@ -137,7 +137,7 @@ export const Checkout = () => {
         <div className="flex justify-between">
           <p className="text-text font-semibold uppercase">total</p>
           <p className="font-bold text-xl text-accent">
-            {cashFormat(sum + shippingCost + sum * 0.18)}
+            {cashFormat(sum + shippingCost + tax)}
           </p>
         </div>
       </section>
